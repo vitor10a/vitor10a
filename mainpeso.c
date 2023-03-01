@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include <windows.h>
+
 
 main()
 
@@ -16,13 +16,11 @@ char sexo;
 printf("Digite sua altura:");    
 scanf("%f",&altura);    
 
-printf("Digite seu peso:");    
-scanf("%f",&peso);    
+printf("Digite seu sexo [F] ou [M]:");  
+setbuf(stdin,NULL);  
+scanf("%c",&sexo);        
 
-printf("Digite seu sexo [F] ou [M]:");    
-scanf("%s",&sexo);        
-
-if(sexo == 'm') 
+if(sexo == 'M') 
 {
 resultado = ((72.7*altura) - 58);
 
